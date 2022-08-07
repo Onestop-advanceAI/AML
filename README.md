@@ -55,22 +55,35 @@ curl --location --request POST 'https://api.advai.net/intl/openapi/monitoring/AM
     
 ### Batch Task Approach
 This approach only supports `screening` mode, and the `monitoring` mode will be available soon. 
-1. *Step 1: create a AML screening workflow* Login OSP portal and goto menu `WORKFLOWS` > `ALLWorkflows`, and click `AML Compliance` template. In the workflow creation page, you can rename the workflow, and then publish it. 
+1. *Step 1: create a AML screening workflow* 
+
+Login OSP portal and goto menu `WORKFLOWS` > `ALLWorkflows`, and click `AML Compliance` template. In the workflow creation page, you can rename the workflow, and then publish it. 
 ![Workflow Creation ](images/create_workflow.png "Create a workflow")
 
-2. *Step 2: create a batch task* Goto menu `VERIFICATION` > `Batch Tasks`, and create a new task. In the pop window, selected the created workflow by name, and download the corresponding excel template. For the template, fill up batch data you want to screen in the *source* sheet after reading *READ THIS FIRST*.
+2. *Step 2: create a batch task* 
+
+Goto menu `VERIFICATION` > `Batch Tasks`, and create a new task. In the pop window, selected the created workflow by name, and download the corresponding excel template. For the template, fill up batch data you want to screen in the *source* sheet after reading *READ THIS FIRST*.
 ![Create a batch task ](images/create_tasks.png "Create a batch task")
 
-3. *Step 3*: In the create new task page, click `schedule new cases` after uploading data file, setting task name and scheduled time. 
+3. *Step 3*
+
+In the create new task page, click `schedule new cases` after uploading data file, setting task name and scheduled time. 
 4, *Step 4*: Download the task result file when the task finishes. In the result file, you can get `caseId` for each data record. 
 
 
 
 ## Check Monitoring Result
 Three approaches to check AML screening and monitoring result when you have a `transactionId`. 
-1. *Approach 1* Goto `VERIFICATIONS > All Verifications` and retrieve the `transactionId` in the search box. In this way, you can get transaction detail info, e.g., status, input parameters, and decision result. If there is `case` with this transaction, you can goto menu `CASES > All Cases` to review and finalize the case status in a similar way. 
 
-2. *Approach 2* Retrieve transaction detail information via our Open API [getTransactionDetail](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_query_result.md) with `transactionId` and *ADVAI_KEY*.
+1. *Approach 1* 
 
-3. *Approach 3* Setup a transaction callback method, and OSP will notify you when transaction ends. This feature is not public currently, and you need to contact our engineers to set it up.
+Goto `VERIFICATIONS > All Verifications` and retrieve the `transactionId` in the search box. In this way, you can get transaction detail info, e.g., status, input parameters, and decision result. If there is `case` with this transaction, you can goto menu `CASES > All Cases` to review and finalize the case status in a similar way. 
+
+2. *Approach 2* 
+
+Retrieve transaction detail information via our Open API [getTransactionDetail](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_query_result.md) with `transactionId` and *ADVAI_KEY*.
+
+3. *Approach 3* 
+
+Setup a transaction callback method, and OSP will notify you when transaction ends. This feature is not public currently, and you need to contact our engineers to set it up.
 
