@@ -22,13 +22,13 @@ Once your account is setup, verify your account via login [Sandbox OSP portal](h
 
 ### Open API Approach
 
-This is the simplest way to do AML screening and monitoring. Just copy following command to your shell, replace `${YOUR_ADVAI_KEY}` with your *ADVAI_KEY*, and then execute it. After execution completes, you will get a `transactionId`, via which you can get a detail screening transaction result in the OSP. 
+This is the simplest way to do AML screening and monitoring. Just copy following command to your shell, replace *${YOUR_ADVAI_KEY}* with your *ADVAI_KEY*, and then execute it. After execution completes, you will get a `transactionId`, via which you can get a detail screening transaction result in the OSP. 
 
 This shell command only instructs OSP to screen a user: `referenceId` is `kun0991412224124` and `name` is `David`, and adds the user to our profile set. Please refer [AML Screening Monitoring](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/aml_monitoring_screening.md) to check other parameters. 
 
 ```shell
 
-curl --location --request POST 'https://sandbox-oop.advai.net/intl/openapi/monitoring/AMLScreeningAndMonitoring' \
+curl --location --request POST 'https://api.advai.net/intl/openapi/monitoring/AMLScreeningAndMonitoring' \
 --header 'Content-type: application/json' \
 --header 'X-ADVAI-KEY: ${YOUR_ADVAI_KEY}' \
 '
