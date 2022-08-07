@@ -1,29 +1,14 @@
-<!-- # AML
- One-stop Platform(OSP) enables banks and financial institution to provides Anti-money Laundering(AML) with AML toolkit.
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
-OSP AML toolkit is important to customer's business, especially for their on-boarding processes. First, financial institutions have to protect themselves from risks and meet AML obligations. Thus, these institutions have to perform an extended AML screening to determine their customer risks and response them according to their business rules. Second, customer risks are not static and change over time, and they should be periodically checked and assessed with new actions. 
+- [AML](#aml)
+    - [Request an OSP account and login OSP](#request-an-osp-account-and-login-osp)
+    - [Setup AML screening and monitoring](#setup-aml-screening-and-monitoring)
+        - [Open API Approach](#open-api-approach)
+        - [Batch Task Approach](#batch-task-approach)
+    - [Check Monitoring Result](#check-monitoring-result)
 
-OPS AML toolkit provides two APIs and one openAPI to screen and monitor a user's risk. 
-
-## AML Screening (api lib -> workflow)
-
-## AML Monitoring (api lib -> workflow)
-
-## AML MonitoringAndScreening (engine: call directedly)
-
-## How to do integration
-
-## API definitions
---> 
-<!-- Start Document Outline -->
-* [AML](#AML)
-  * [Request an OSP account and login OSP](##Request an OSP account and login OSP)
-  * [Setup AML screening and monitoring](##Setup AML screening and monitoring)
-	* [Open API Approach](###Markdown Editor)
-  	* [Batch Task Approach](###Open API Approach)
-  * [Check Monitoring Result](##Check Monitoring Result)
-<!-- End Document Outline -->
-
+<!-- markdown-toc end -->
 # AML
 This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, screening&monitoring a user, and check monitoring result in the OSP
 
