@@ -1,15 +1,15 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [AML](#aml)
-    - [Request an OSP account and login OSP](#request-an-osp-account-and-login-osp)
-    - [Setup AML screening and monitoring](#setup-aml-screening-and-monitoring)
-        - [Open API Approach](#open-api-approach)
-        - [Batch Task Approach](#batch-task-approach)
+- [-](#-)
+- [Request an OSP account and login OSP](#request-an-osp-account-and-login-osp)
+- [Setup AML screening and monitoring](#setup-aml-screening-and-monitoring)
+    - [Open API Approach](#open-api-approach)
+    - [Batch Task Approach](#batch-task-approach)
     - [Check Monitoring Result](#check-monitoring-result)
 
 <!-- markdown-toc end -->
-# AML
+## AML
 This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, screening&monitoring a user, and check monitoring result in the OSP
 
 ## Request an OSP account and login OSP
