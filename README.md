@@ -9,13 +9,14 @@
     - [Check Monitoring Result](#check-monitoring-result)
 
 <!-- markdown-toc end -->
+
 ## AML
-This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, screening&monitoring a user, and check monitoring result in the OSP
+This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, AML screening&monitoring, and check results in the OSP.
 
 ## Request an OSP account and login OSP
 If you are interested in OSP/AML, please contact our operation team to open an account with OSP permission. 
 
-Once your account is setup, you should be able to login [Sandbox OSP portal](https://sandbox-oop.advai.net/). You can also request your *ADVAI_KEY* for the purpose of authentication and no leak for it.
+Once your account is setup, verify your account via login [Sandbox OSP portal](https://sandbox-oop.advai.net/). Meanwhile, you also need to request your *ADVAI_KEY* for the purpose of authentication. Protect this key.
 
 ## Setup AML screening and monitoring
 
