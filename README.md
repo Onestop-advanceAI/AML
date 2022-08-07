@@ -17,25 +17,11 @@ OPS AML toolkit provides two APIs and one openAPI to screen and monitor a user's
 --> 
 <!-- Start Document Outline -->
 * [AML](#AML)
-* [Installation](#installation)
-* [Links](#links)
-* [Show your Support](#show-your-support)
-* [Features](#features)
-	* [Markdown Editor](#markdown-editor)
-		* [Image Features](#image-features)
-		* [Editing Features](#editing-features)
-		* [Output and Selections](#output-and-selections)
-		* [Theme Support](#theme-support)
-		* [File Operations](#file-operations)
-		* [Weblog Publisher](#weblog-publisher)
-		* [Non Markdown Features](#non-markdown-features)
-	* [Command Line features](#command-line-features)
-	* [Why another Markdown Editor?](#why-another-markdown-editor)
-* [Acknowledgements](#acknowledgements)
-* [Spread the Word about Markdown Monster](#spread-the-word-about-markdown-monster)
-* [License](#license)
-	* [Contribute - get a Free License](#contribute---get-a-free-license)
-	* [Warranty Disclaimer: No Warranty!](#warranty-disclaimer-no-warranty)
+  * [Request an OSP account and login OSP](#Request an OSP account and login OSP)
+  * [Setup AML screening and monitoring](#Setup AML screening and monitoring)
+	* [Open API Approach](#Markdown Editor)
+  	* [Batch Task Approach](#Open API Approach)
+  * [Check Monitoring Result](#Check Monitoring Result)
 <!-- End Document Outline -->
 
 # AML
@@ -47,7 +33,8 @@ If you are interested in OSP/AML, please contact our operation team to open an a
 Once your account is setup, you should be able to login [Sandbox OSP portal](https://sandbox-oop.advai.net/). You can also request your *ADVAI_KEY* for the purpose of authentication and no leak for it.
 
 ## Setup AML screening and monitoring
-### Via OSP Open API
+
+### Open API Approach
 
 This is the simplest way to do AML screening and monitoring. Just copy following command to your shell, replace `${YOUR_ADVAI_KEY}` with your *ADVAI_KEY*, and then execute it. After execution completes, you will get a `transactionId`, via which you can get a detail screening transaction result in the OSP. 
 
@@ -79,9 +66,24 @@ curl --location --request POST 'https://sandbox-oop.advai.net/intl/openapi/monit
 '
 ```
 
+    
+### Batch Task Approach
+This approach only supports `screening` mode, and the `monitoring` mode will be available soon. 
+1. *Step 1: create a AML screening workflow* Login OSP portal and goto menu `WORKFLOWS` > `ALLWorkflows`, and click `AML Compliance` template. In the workflow creation page, you can rename the workflow, and then publish it. 
+![Workflow Creation ](images/create_workflow.png "Create a workflow")
 
-### Via OSP Batch
+2. *Step 2: create a batch task* Goto menu `VERIFICATION` > `Batch Tasks`, and create a new task. In the pop window, selected the created workflow by name, and download the corresponding excel template. For the template, fill up batch data you want to screen in the *source* sheet after reading *READ THIS FIRST*.
+
+3. *Step 3*: In the create new task page, click `schedule new cases` after uploading data file, setting task name and scheduled time. 
+4, *Step 4*: Download the task result file when the task finishes. In the result file, you can get `caseId` for each data record. 
 
 
 
 ## Check Monitoring Result
+Three approaches to check AML screening and monitoring result when you have a `transactionId`. 
+1. *Approach 1* Goto `VERIFICATIONS > All Verifications` and retrieve the `transactionId` in the search box. In this way, you can get transaction detail info, e.g., status, input parameters, and decision result. If there is `case` with this transaction, you can goto menu `CASES > All Cases` to review and finalize the case status in a similar way. 
+
+2. *Approach 2* Retrieve transaction detail information via our Open API [getTransactionDetail](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_query_result.md) with `transactionId` and *ADVAI_KEY*.
+
+3. *Approach 3* Setup transaction callback method with us, and OSP will notify you when transaction is made. This feature is not public currently, and you need to contact our engineers to set it up.
+
