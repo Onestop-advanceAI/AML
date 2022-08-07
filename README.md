@@ -17,11 +17,11 @@ OPS AML toolkit provides two APIs and one openAPI to screen and monitor a user's
 --> 
 <!-- Start Document Outline -->
 * [AML](#AML)
-  * [Request an OSP account and login OSP](#Request an OSP account and login OSP)
-  * [Setup AML screening and monitoring](#Setup AML screening and monitoring)
-	* [Open API Approach](#Markdown Editor)
-  	* [Batch Task Approach](#Open API Approach)
-  * [Check Monitoring Result](#Check Monitoring Result)
+  * [Request an OSP account and login OSP](##Request an OSP account and login OSP)
+  * [Setup AML screening and monitoring](##Setup AML screening and monitoring)
+	* [Open API Approach](###Markdown Editor)
+  	* [Batch Task Approach](###Open API Approach)
+  * [Check Monitoring Result](##Check Monitoring Result)
 <!-- End Document Outline -->
 
 # AML
@@ -73,6 +73,7 @@ This approach only supports `screening` mode, and the `monitoring` mode will be 
 ![Workflow Creation ](images/create_workflow.png "Create a workflow")
 
 2. *Step 2: create a batch task* Goto menu `VERIFICATION` > `Batch Tasks`, and create a new task. In the pop window, selected the created workflow by name, and download the corresponding excel template. For the template, fill up batch data you want to screen in the *source* sheet after reading *READ THIS FIRST*.
+![Create a batch task ](images/create_tasks.png "Create a batch task")
 
 3. *Step 3*: In the create new task page, click `schedule new cases` after uploading data file, setting task name and scheduled time. 
 4, *Step 4*: Download the task result file when the task finishes. In the result file, you can get `caseId` for each data record. 
@@ -85,5 +86,5 @@ Three approaches to check AML screening and monitoring result when you have a `t
 
 2. *Approach 2* Retrieve transaction detail information via our Open API [getTransactionDetail](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_query_result.md) with `transactionId` and *ADVAI_KEY*.
 
-3. *Approach 3* Setup transaction callback method with us, and OSP will notify you when transaction is made. This feature is not public currently, and you need to contact our engineers to set it up.
+3. *Approach 3* Setup a transaction callback method, and OSP will notify you when transaction ends. This feature is not public currently, and you need to contact our engineers to set it up.
 
