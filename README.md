@@ -2,13 +2,14 @@
 **Table of Contents**
 
 - [-](#-)
-- [Request an OSP account and login OSP](#request-an-osp-account-and-login-osp)
+- [How to get account and key](#how-to-get-account-and-key)
 - [Setup AML screening and monitoring](#setup-aml-screening-and-monitoring)
     - [Open API Approach](#open-api-approach)
     - [Batch Task Approach](#batch-task-approach)
     - [Check Monitoring Result](#check-monitoring-result)
 
 <!-- markdown-toc end -->
+
 
 ## AML
 This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, AML screening&monitoring, and check results in the OSP.
