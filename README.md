@@ -11,7 +11,7 @@
 <!-- markdown-toc end -->
 
 
-## AML
+# AML
 This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, AML screening&monitoring, and check results in the OSP.
 
 ## How to get account and key
@@ -23,7 +23,7 @@ Once your account is setup, verify your account via login [Sandbox OSP portal](h
 Two approaches to use AML functions:
 ### Open API Approach
 
-This is the simplest way to do AML screening and monitoring. Just copy following command to your shell, replace *${YOUR_ADVAI_KEY}* with your *ADVAI_KEY*, and then execute it. After execution completes, you will get a `transactionId`, via which you can get a detail screening transaction result in the OSP. 
+This is the simplest way to do AML screening and monitoring. Just copy the following command to your shell, replace *YOUR_ADVAI_KEY* with your *ADVAI_KEY*, and then execute it. After execution completes, you will get a `transactionId`, via which you can get a detail screening transaction result in the OSP. 
 
 This shell command only instructs OSP to screen a user: `referenceId` is `kun0991412224124` and `name` is `David`, and adds the user to our profile set. Please refer [AML Screening Monitoring](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/aml_monitoring_screening.md) to check other parameters. 
 
@@ -54,7 +54,7 @@ curl --location --request POST 'https://api.advai.net/intl/openapi/monitoring/AM
 ```
 
     
-### Batch Task Approach
+### Workflow Approach
 This approach only supports `screening` mode, and the `monitoring` mode will be available soon. 
 1. *Step 1: create a AML screening workflow* 
 
@@ -69,8 +69,10 @@ Goto menu `VERIFICATION` > `Batch Tasks`, and create a new task. In the pop wind
 3. *Step 3*
 
 In the create new task page, click `schedule new cases` after uploading data file, setting task name and scheduled time. 
+
 4, *Step 4*: Download the task result file when the task finishes. In the result file, you can get `caseId` for each data record. 
 
+The alternative for *step 2* is to call execute the workflow created in **step 1** using OSP Open API [Workflow Submission](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_submit.md)
 
 
 ## Check Monitoring Result
