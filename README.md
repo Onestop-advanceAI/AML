@@ -13,13 +13,13 @@
 ## AML
 This is a reference manual and configuration guide for Anti-Money Laundering(AML) integration. It describes how to request an account, AML screening&monitoring, and check results in the OSP.
 
-## Request an OSP account and login OSP
+## How to get account and key
 If you are interested in OSP/AML, please contact our operation team to open an account with OSP permission. 
 
 Once your account is setup, verify your account via login [Sandbox OSP portal](https://sandbox-oop.advai.net/). Meanwhile, you also need to request your *ADVAI_KEY* for the purpose of authentication. Protect this key.
 
 ## Setup AML screening and monitoring
-
+Two approaches to use AML functions:
 ### Open API Approach
 
 This is the simplest way to do AML screening and monitoring. Just copy following command to your shell, replace *${YOUR_ADVAI_KEY}* with your *ADVAI_KEY*, and then execute it. After execution completes, you will get a `transactionId`, via which you can get a detail screening transaction result in the OSP. 
