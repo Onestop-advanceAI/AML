@@ -32,7 +32,6 @@ This shell command only instructs OSP to screen a user: `referenceId` is `kun099
 curl --location --request POST 'https://api.advai.net/intl/openapi/monitoring/amlScreeningAndMonitoring' \
 --header 'Content-type: application/json' \
 --header 'X-ADVAI-KEY: ${YOUR_ADVAI_KEY}' \
-'
 --data-raw '{                                 
   "name": "David",                    
   "type": [                           
