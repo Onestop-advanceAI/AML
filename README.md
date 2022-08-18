@@ -81,13 +81,14 @@ Three approaches to check AML screening and monitoring result when you have a `t
 
 1. *Approach 1* 
 
-Goto *VERIFICATIONS* >  *All Verifications* and retrieve the `transactionId` in the search box. In this way, you can get transaction detail info, e.g., status, input parameters, and decision result. If there is `case` with this transaction, you can goto menu *CASES > All Cases* to review and finalize the case status in a similar way. 
+Goto *VERIFICATIONS* >  *All Verifications* and retrieve the `transactionId` in the search box. In this way, you can get a transaction detail info, e.g., status, input parameters, and decision result. If there is `case` with this transaction, you can goto menu *CASES > All Cases* to review and finalize the case status in a similar way. 
 
 2. *Approach 2* 
 
-Retrieve transaction detail information via our Open API [`transaction query` ](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_query_result.md) with `transactionId` and *ADVAI_KEY*.
+Setup a callback method to receive transaction notifications and then get the detail screening result via our OpenAPI [`transaction query` ](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_query_result.md). After setuping the callback, OSP pushes transaction status change information(e.g., workflow id, tenant id, and transaction id and status) to customer side, when the transaction ends. Once receiving the notification, your can obtain the detail screening result using the `transaction query` API with your transaction id and *ADVAI_KEY*. 
 
-3. *Approach 3* 
+Additionally, you can also query a case detail information via [`case query`]().
 
-Setup a transaction callback method, and OSP will notify you when transaction ends. As this feature is not public currently, you need to contact our engineers to set it up.
+As callback setup is not open to public currently, you need to contact our engineers to set it up. Refer to Page[How to setup transaction callback]()
+
 
