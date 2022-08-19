@@ -89,6 +89,6 @@ Setup a callback method to receive transaction notifications and then get the de
 
 Additionally, you can also query a case detail information via [`case query`]().
 
-As callback setup is not open to public currently, you need to contact our engineers to set it up. Refer to Page[How to setup transaction callback]()
+As callback setup is not open to public currently, you need to contact our engineers to set it up. Refer to Page[How to setup transaction callback](https://github.com/Onestop-advanceAI/APIRepostiroy/blob/master/open_apis/workflow_event_callback.md)
 
 
